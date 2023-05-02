@@ -1,4 +1,4 @@
-﻿module github.com/guji-ai/pdfcpu
+module github.com/guji-ai/pdfcpu
 
 go 1.20
 
@@ -12,4 +12,7 @@ require (
 	gopkg.in/yaml.v2 v2.4.0
 )
 
-require github.com/rivo/uniseg v0.4.4 // indirect
+require (
+	github.com/nfnt/resize v0.0.0-20180221191011-83c6a9932646 // indirect
+	github.com/rivo/uniseg v0.4.4 // indirect
+)

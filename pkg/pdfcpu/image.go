@@ -18,6 +18,9 @@ package pdfcpu
 
 import (
 	"fmt"
+	"image"
+	"image/jpeg"
+	"os"
 	"path/filepath"
 	"sort"
 	"strconv"
@@ -27,6 +30,11 @@ import (
 	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/draw"
 	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/model"
 	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/types"
+	"github.com/nfnt/resize"
+)
+
+const (
+	MaxSize = 1200
 )
 
 func listImages(ctx *model.Context, mm []map[int]model.Image, maxLenObjNr, maxLenID, maxLenSize, maxLenFilters int) ([]string, int, int64, error) {
@@ -208,8 +216,8 @@ func ListImages(ctx *model.Context, selectedPages types.IntSet) ([]string, error
 }
 
 // WriteImageToDisk returns a closure for writing img to disk.
-func WriteImageToDisk(outDir, fileName string) func(model.Image, bool, int) error {
-	return func(img model.Image, singleImgPerPage bool, maxPageDigits int) error {
+func WriteImageToDisk(outDir, fileName string) func(model.Image, bool, int, int) error {
+	return func(img model.Image, singleImgPerPage bool, current int, maxPageDigits int) error {
 		if img.Reader == nil {
 			return nil
 		}
@@ -218,7 +226,7 @@ func WriteImageToDisk(outDir, fileName string) func(model.Image, bool, int) erro
 		if img.Thumb {
 			qual = "thumb"
 		}
-		f := fmt.Sprintf(s+"_%s.%s", fileName, img.PageNr, qual, img.FileType)
+		f := fmt.Sprintf(s+"_%s.%s", fileName, img.PageNr, qual, "jpg")
 		// if singleImgPerPage {
 		// 	if img.thumb {
 		// 		s += "_" + qual
@@ -226,7 +234,52 @@ func WriteImageToDisk(outDir, fileName string) func(model.Image, bool, int) erro
 		// 	f = fmt.Sprintf(s+".%s", fileName, img.pageNr, img.FileType)
 		// }
 		outFile := filepath.Join(outDir, f)
-		log.CLI.Printf("writing %s\n", outFile)
-		return WriteReader(outFile, img)
+		fmt.Printf("writing %s\n", outFile)
+
+		fmt.Printf("img.Width %d\n", img.Width)
+		fmt.Printf("img.Height %d\n", img.Height)
+
+		origin, _, err := image.Decode(img)
+		if err != nil {
+			log.CLI.Fatalf("image.Decode %s\n", outFile)
+			return err
+		}
+
+		width := origin.Bounds().Dx()
+		height := origin.Bounds().Dy()
+		if width > MaxSize || height > MaxSize {
+			// 调整图片尺寸，png -> jpg
+			fmt.Printf("img.Width resize %d\n", width)
+			origin = resize.Thumbnail(MaxSize, MaxSize, origin, resize.Lanczos3)
+			fmt.Printf("img.Width resized %d\n", origin.Bounds().Dx())
+
+			w, err := os.Create(outFile)
+			if err != nil {
+				return err
+			}
+			if err = jpeg.Encode(w, origin, &jpeg.Options{Quality: 90}); err != nil {
+				return err
+			}
+			return w.Close()
+		} else {
+			if img.FileType == "jpg" {
+				return WriteReader(outFile, img)
+			} else {
+				// png -> jpg
+				origin, _, err := image.Decode(img)
+				if err != nil {
+					log.CLI.Fatalf("image.Decode %s\n", outFile)
+					return err
+				}
+				w, err := os.Create(outFile)
+				if err != nil {
+					return err
+				}
+				if err = jpeg.Encode(w, origin, &jpeg.Options{Quality: 90}); err != nil {
+					return err
+				}
+				return w.Close()
+			}
+		}
 	}
 }

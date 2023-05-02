@@ -72,9 +72,9 @@ func ExtractImagesRaw(rs io.ReadSeeker, selectedPages []string, conf *model.Conf
 }
 
 // ExtractImages extracts and digests embedded image resources from rs for selected pages.
-func ExtractImages(rs io.ReadSeeker, selectedPages []string, digestImage func(model.Image, bool, int) error, conf *model.Configuration) error {
+func ExtractImages(rs io.ReadSeeker, selectedPages []string, digestImage func(model.Image, bool, int, int) error, progressReport func(int, int) error, conf *model.Configuration) (*model.Context, error) {
 	if rs == nil {
-		return errors.New("pdfcpu: ExtractImages: Please provide rs")
+		return nil, errors.New("pdfcpu: ExtractImages: Please provide rs")
 	}
 	if conf == nil {
 		conf = model.NewDefaultConfiguration()
@@ -82,16 +82,16 @@ func ExtractImages(rs io.ReadSeeker, selectedPages []string, digestImage func(mo
 
 	ctx, _, _, _, err := readValidateAndOptimize(rs, conf, time.Now())
 	if err != nil {
-		return err
+		return nil, err
 	}
 
 	if err := ctx.EnsurePageCount(); err != nil {
-		return err
+		return nil, err
 	}
 
 	pages, err := PagesForPageSelection(ctx.PageCount, selectedPages, true)
 	if err != nil {
-		return err
+		return nil, err
 	}
 
 	pageNrs := []int{}
@@ -105,32 +105,39 @@ func ExtractImages(rs io.ReadSeeker, selectedPages []string, digestImage func(mo
 	sort.Ints(pageNrs)
 	maxPageDigits := len(strconv.Itoa(pageNrs[len(pageNrs)-1]))
 
+	current := 1
 	for _, i := range pageNrs {
 		mm, err := pdfcpu.ExtractPageImages(ctx, i, false)
 		if err != nil {
-			return err
+			return nil, err
 		}
 		singleImgPerPage := len(mm) == 1
 		for _, img := range mm {
-			if err := digestImage(img, singleImgPerPage, maxPageDigits); err != nil {
-				return err
+			if progressReport != nil {
+				if err := progressReport(current, ctx.PageCount); err != nil {
+					return nil, err
+				}
 			}
+			if err := digestImage(img, singleImgPerPage, current, maxPageDigits); err != nil {
+				return nil, err
+			}
+			current += 1
 		}
 	}
 
-	return nil
+	return ctx, nil
 }
 
 // ExtractImagesFile dumps embedded image resources from inFile into outDir for selected pages.
-func ExtractImagesFile(inFile, outDir string, selectedPages []string, conf *model.Configuration) error {
+func ExtractImagesFile(inFile, outDir string, selectedPages []string, progressReport func(int, int) error, conf *model.Configuration) (*model.Context, error) {
 	f, err := os.Open(inFile)
 	if err != nil {
-		return err
+		return nil, err
 	}
 	defer f.Close()
 	log.CLI.Printf("extracting images from %s into %s/ ...\n", inFile, outDir)
 	fileName := strings.TrimSuffix(filepath.Base(inFile), ".pdf")
-	return ExtractImages(f, selectedPages, pdfcpu.WriteImageToDisk(outDir, fileName), conf)
+	return ExtractImages(f, selectedPages, pdfcpu.WriteImageToDisk(outDir, fileName), progressReport, conf)
 }
 
 func writeFonts(ff []pdfcpu.Font, outDir, fileName string) error {
