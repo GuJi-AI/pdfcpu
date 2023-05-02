@@ -1,4 +1,4 @@
-/*
+﻿/*
 	Copyright 2021 The pdfcpu Authors.
 
 	Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,11 +23,11 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/pdfcpu/pdfcpu/pkg/font"
-	pdffont "github.com/pdfcpu/pdfcpu/pkg/pdfcpu/font"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/model"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/primitives"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/types"
+	"github.com/guji-ai/pdfcpu/pkg/font"
+	pdffont "github.com/guji-ai/pdfcpu/pkg/pdfcpu/font"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/model"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/primitives"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/types"
 	"github.com/pkg/errors"
 )
 

@@ -1,4 +1,4 @@
-/*
+﻿/*
 Copyright 2019 The pdf Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,8 +23,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pdfcpu/pdfcpu/pkg/api"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/model"
+	"github.com/guji-ai/pdfcpu/pkg/api"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/model"
 )
 
 func prepareForAttachmentTest(t *testing.T) error {

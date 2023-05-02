@@ -1,4 +1,4 @@
-/*
+﻿/*
 Copyright 2018 The pdfcpu Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,7 +23,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/pdfcpu/pdfcpu/pkg/filter"
+	"github.com/guji-ai/pdfcpu/pkg/filter"
 )
 
 func TestFilterSupport(t *testing.T) {

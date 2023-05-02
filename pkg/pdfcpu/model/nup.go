@@ -1,4 +1,4 @@
-/*
+﻿/*
 Copyright 2021 The pdfcpu Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,12 +22,12 @@ import (
 	"io"
 	"math"
 
-	"github.com/pdfcpu/pdfcpu/pkg/filter"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/color"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/draw"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/matrix"
+	"github.com/guji-ai/pdfcpu/pkg/filter"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/color"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/draw"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/matrix"
 
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/types"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/types"
 	"github.com/pkg/errors"
 )
 

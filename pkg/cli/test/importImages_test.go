@@ -1,4 +1,4 @@
-/*
+﻿/*
 Copyright 2020 The pdfcpu Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,10 +20,10 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/pdfcpu/pdfcpu/pkg/api"
-	"github.com/pdfcpu/pdfcpu/pkg/cli"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/types"
+	"github.com/guji-ai/pdfcpu/pkg/api"
+	"github.com/guji-ai/pdfcpu/pkg/cli"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/types"
 )
 
 func testImportImages(t *testing.T, msg string, imgFiles []string, outFile, impConf string) {

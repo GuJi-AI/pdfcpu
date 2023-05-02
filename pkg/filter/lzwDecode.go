@@ -1,4 +1,4 @@
-/*
+﻿/*
 Copyright 2018 The pdfcpu Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,7 +21,7 @@ import (
 	"io"
 
 	"github.com/hhrutter/lzw"
-	"github.com/pdfcpu/pdfcpu/pkg/log"
+	"github.com/guji-ai/pdfcpu/pkg/log"
 	"github.com/pkg/errors"
 )
 

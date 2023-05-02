@@ -1,4 +1,4 @@
-/*
+﻿/*
 Copyright 2020 The pdfcpu Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,9 +17,9 @@ limitations under the License.
 package pdfcpu
 
 import (
-	"github.com/pdfcpu/pdfcpu/pkg/log"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/model"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/types"
+	"github.com/guji-ai/pdfcpu/pkg/log"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/model"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/types"
 )
 
 // CollectPages creates a new PDF Context for a custom PDF page sequence of the PDF represented by ctx.

@@ -1,4 +1,4 @@
-/*
+﻿/*
 Copyright 2023 The pdfcpu Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,7 +16,7 @@ limitations under the License.
 
 package model
 
-import "github.com/pdfcpu/pdfcpu/pkg/pdfcpu/types"
+import "github.com/guji-ai/pdfcpu/pkg/pdfcpu/types"
 
 // DestinationType represents the various PDF destination types.
 type DestinationType int

@@ -1,4 +1,4 @@
-/*
+﻿/*
 	Copyright 2020 The pdfcpu Authors.
 
 	Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,9 +21,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/pdfcpu/pdfcpu/pkg/log"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/model"
+	"github.com/guji-ai/pdfcpu/pkg/log"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/model"
 )
 
 // Rotate rotates selected pages of rs clockwise by rotation degrees and writes the result to w.

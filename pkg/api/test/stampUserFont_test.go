@@ -1,4 +1,4 @@
-/*
+﻿/*
 Copyright 2021 The pdfcpu Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,7 +21,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/pdfcpu/pdfcpu/pkg/api"
+	"github.com/guji-ai/pdfcpu/pkg/api"
 )
 
 func TestStampUserFont(t *testing.T) {

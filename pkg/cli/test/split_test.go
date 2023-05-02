@@ -1,4 +1,4 @@
-/*
+﻿/*
 Copyright 2020 The pdfcpu Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,8 +20,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/pdfcpu/pdfcpu/pkg/cli"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/model"
+	"github.com/guji-ai/pdfcpu/pkg/cli"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/model"
 )
 
 // Split a test PDF file up into single page PDFs (using a split span of 1).

@@ -1,4 +1,4 @@
-//go:build !js
+﻿//go:build !js
 // +build !js
 
 /*
@@ -23,7 +23,7 @@ import (
 	"bytes"
 	"io"
 
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/types"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/types"
 	"github.com/pkg/errors"
 	"gopkg.in/yaml.v2"
 )

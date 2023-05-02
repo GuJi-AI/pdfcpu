@@ -1,4 +1,4 @@
-/*
+﻿/*
 Copyright 2020 The pdf Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,8 +23,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/pdfcpu/pdfcpu/pkg/api"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu"
+	"github.com/guji-ai/pdfcpu/pkg/api"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu"
 )
 
 func TestExtractImages(t *testing.T) {

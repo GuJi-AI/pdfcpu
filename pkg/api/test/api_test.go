@@ -1,4 +1,4 @@
-/*
+﻿/*
 Copyright 2018 The pdf Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -25,10 +25,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pdfcpu/pdfcpu/pkg/api"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/model"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/types"
+	"github.com/guji-ai/pdfcpu/pkg/api"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/model"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/types"
 )
 
 var inDir, outDir, resDir, samplesDir string

@@ -1,10 +1,10 @@
-# Dockerfile References: https://docs.docker.com/engine/reference/builder/
+﻿# Dockerfile References: https://docs.docker.com/engine/reference/builder/
 
 # Start from the latest golang base image
 FROM golang:latest as builder
 
 # install
-RUN go install github.com/pdfcpu/pdfcpu/cmd/pdfcpu@latest
+RUN go install github.com/guji-ai/pdfcpu/cmd/pdfcpu@latest
 
 ######## Start a new stage from scratch #######
 

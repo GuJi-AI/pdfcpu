@@ -1,4 +1,4 @@
-/*
+﻿/*
 Copyright 2018 The pdfcpu Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,8 +22,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/pdfcpu/pdfcpu/pkg/filter"
-	"github.com/pdfcpu/pdfcpu/pkg/log"
+	"github.com/guji-ai/pdfcpu/pkg/filter"
+	"github.com/guji-ai/pdfcpu/pkg/log"
 
 	"github.com/pkg/errors"
 )

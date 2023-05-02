@@ -1,4 +1,4 @@
-/*
+﻿/*
 Copyright 2018 The pdfcpu Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -29,8 +29,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/pdfcpu/pdfcpu/pkg/filter"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/types"
+	"github.com/guji-ai/pdfcpu/pkg/filter"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/types"
 	"github.com/pkg/errors"
 	_ "golang.org/x/image/webp"
 )

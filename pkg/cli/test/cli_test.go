@@ -1,4 +1,4 @@
-/*
+﻿/*
 Copyright 2020 The pdfcpu Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,10 +23,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/pdfcpu/pdfcpu/pkg/api"
-	"github.com/pdfcpu/pdfcpu/pkg/cli"
-	"github.com/pdfcpu/pdfcpu/pkg/log"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/model"
+	"github.com/guji-ai/pdfcpu/pkg/api"
+	"github.com/guji-ai/pdfcpu/pkg/cli"
+	"github.com/guji-ai/pdfcpu/pkg/log"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/model"
 )
 
 var inDir, outDir, resDir, fontDir, samplesDir string

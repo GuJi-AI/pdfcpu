@@ -1,4 +1,4 @@
-/*
+﻿/*
 	Copyright 2020 The pdfcpu Authors.
 
 	Licensed under the Apache License, Version 2.0 (the "License");
@@ -24,14 +24,14 @@ import (
 	"sort"
 	"unicode/utf8"
 
-	"github.com/pdfcpu/pdfcpu/pkg/font"
-	"github.com/pdfcpu/pdfcpu/pkg/log"
-	pdf "github.com/pdfcpu/pdfcpu/pkg/pdfcpu"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/color"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/draw"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/model"
+	"github.com/guji-ai/pdfcpu/pkg/font"
+	"github.com/guji-ai/pdfcpu/pkg/log"
+	pdf "github.com/guji-ai/pdfcpu/pkg/pdfcpu"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/color"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/draw"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/model"
 
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/types"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/types"
 	"github.com/pkg/errors"
 )
 

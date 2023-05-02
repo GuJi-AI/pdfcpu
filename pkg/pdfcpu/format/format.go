@@ -1,4 +1,4 @@
-/*
+﻿/*
 Copyright 2023 The pdfcpu Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,7 +20,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/model"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/model"
 )
 
 // Text returns a string with resolved place holders for pageNr, pageCount, timestamp or pdfcpu version.

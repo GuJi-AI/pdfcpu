@@ -1,4 +1,4 @@
-/*
+﻿/*
 Copyright 2020 The pdf Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,12 +20,12 @@ import (
 	"path/filepath"
 	"testing"
 
-	pdf "github.com/pdfcpu/pdfcpu/pkg/pdfcpu"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/color"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/draw"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/model"
+	pdf "github.com/guji-ai/pdfcpu/pkg/pdfcpu"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/color"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/draw"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/model"
 
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/types"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/types"
 )
 
 const (

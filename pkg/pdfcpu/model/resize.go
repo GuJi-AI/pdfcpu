@@ -1,4 +1,4 @@
-/*
+﻿/*
 Copyright 2021 The pdfcpu Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,8 +20,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/color"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/types"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/color"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/types"
 	"github.com/pkg/errors"
 )
 

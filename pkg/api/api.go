@@ -1,4 +1,4 @@
-/*
+﻿/*
 	Copyright 2018 The pdfcpu Authors.
 
 	Licensed under the Apache License, Version 2.0 (the "License");
@@ -39,11 +39,11 @@ import (
 	"os"
 	"time"
 
-	"github.com/pdfcpu/pdfcpu/pkg/log"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu"
+	"github.com/guji-ai/pdfcpu/pkg/log"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu"
 
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/model"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/validate"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/model"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/validate"
 )
 
 // ReadContext uses an io.ReadSeeker to build an internal structure holding its cross reference table aka the Context.

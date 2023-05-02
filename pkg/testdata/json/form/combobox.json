@@ -1,4 +1,4 @@
-{
+﻿{
 	"paper": "A4P",
 	"crop": "10",
 	"origin": "LowerLeft",
@@ -75,7 +75,7 @@
 		},
 		"logo2": {
 			"src": "$logo2",
-			"url": "https://github.com/pdfcpu/pdfcpu",
+			"url": "https://github.com/guji-ai/pdfcpu",
 			"margin": {
 				"width": 5
 			}

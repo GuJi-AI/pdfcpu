@@ -1,4 +1,4 @@
-/*
+﻿/*
 Copyright 2019 The pdfcpu Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,8 +18,8 @@ limitations under the License.
 package cli
 
 import (
-	"github.com/pdfcpu/pdfcpu/pkg/api"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/model"
+	"github.com/guji-ai/pdfcpu/pkg/api"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/model"
 	"github.com/pkg/errors"
 )
 

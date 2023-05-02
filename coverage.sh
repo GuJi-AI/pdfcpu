@@ -1,4 +1,4 @@
-#!/bin/sh
+﻿#!/bin/sh
 
 # Copyright 2018 The pdfcpu Authors.
 #
@@ -24,7 +24,7 @@ function internalDeps {
 
     for p in $(go list -f '{{.Deps}}' $1)
     do
-        if [[ $p == github.com/pdfcpu/pdfcpu* ]]; then
+        if [[ $p == github.com/guji-ai/pdfcpu* ]]; then
             idep=$idep,$p 
         fi
     done

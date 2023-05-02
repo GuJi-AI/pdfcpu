@@ -1,4 +1,4 @@
-/*
+﻿/*
 	Copyright 2021 The pdfcpu Authors.
 
 	Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,8 +19,8 @@ package primitives
 import (
 	"io"
 
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/draw"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/types"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/draw"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/types"
 )
 
 // Guide represents horizontal and vertical lines at (x,y) for layout purposes.

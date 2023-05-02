@@ -1,4 +1,4 @@
-/*
+﻿/*
 Copyright 2022 The pdfcpu Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,8 +21,8 @@ import (
 	"io"
 	"strings"
 
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/color"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/types"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/color"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/types"
 )
 
 // RenderMode represents the text rendering mode (see 9.3.6)

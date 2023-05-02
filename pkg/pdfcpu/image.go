@@ -1,4 +1,4 @@
-/*
+﻿/*
 Copyright 2021 The pdfcpu Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,10 +23,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/pdfcpu/pdfcpu/pkg/log"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/draw"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/model"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/types"
+	"github.com/guji-ai/pdfcpu/pkg/log"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/draw"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/model"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/types"
 )
 
 func listImages(ctx *model.Context, mm []map[int]model.Image, maxLenObjNr, maxLenID, maxLenSize, maxLenFilters int) ([]string, int, int64, error) {

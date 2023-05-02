@@ -1,4 +1,4 @@
-/*
+﻿/*
 	Copyright 2023 The pdfcpu Authors.
 
 	Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,10 +27,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/pdfcpu/pdfcpu/pkg/log"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/create"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/form"
-	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/model"
+	"github.com/guji-ai/pdfcpu/pkg/log"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/create"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/form"
+	"github.com/guji-ai/pdfcpu/pkg/pdfcpu/model"
 	"github.com/pkg/errors"
 )
 
