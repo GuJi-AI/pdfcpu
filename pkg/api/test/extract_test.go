@@ -33,13 +33,13 @@ func TestExtractImages(t *testing.T) {
 	for _, fn := range []string{"5116.DCT_Filter.pdf", "testImage.pdf", "go.pdf"} {
 		// Test writing files
 		fn = filepath.Join(inDir, fn)
-		if err := api.ExtractImagesFile(fn, outDir, nil, nil); err != nil {
+		if _, err := api.ExtractImagesFile(fn, outDir, nil, nil, nil); err != nil {
 			t.Fatalf("%s %s: %v\n", msg, fn, err)
 		}
 	}
 	// Extract images for inFile starting with page 1 into outDir.
 	inFile := filepath.Join(inDir, "testImage.pdf")
-	if err := api.ExtractImagesFile(inFile, outDir, []string{"1-"}, nil); err != nil {
+	if _, err := api.ExtractImagesFile(inFile, outDir, []string{"1-"}, nil, nil); err != nil {
 		t.Fatalf("%s %s: %v\n", msg, inFile, err)
 	}
 }

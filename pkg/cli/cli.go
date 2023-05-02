@@ -135,7 +135,8 @@ func MergeAppend(cmd *Command) ([]string, error) {
 
 // ExtractImages dumps embedded image resources from inFile into outDir for selected pages.
 func ExtractImages(cmd *Command) ([]string, error) {
-	return nil, api.ExtractImagesFile(*cmd.InFile, *cmd.OutDir, cmd.PageSelection, cmd.Conf)
+	_, err := api.ExtractImagesFile(*cmd.InFile, *cmd.OutDir, cmd.PageSelection, nil, cmd.Conf)
+	return nil, err
 }
 
 // ExtractFonts dumps embedded fontfiles from inFile into outDir for selected pages.

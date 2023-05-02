@@ -293,7 +293,7 @@ func ExampleExtractAttachmentsFile() {
 func ExampleExtractImagesFile() {
 
 	// Extract embedded images from in.pdf into outDir.
-	ExtractImagesFile("in.pdf", "outDir", nil, nil)
+	ExtractImagesFile("in.pdf", "outDir", nil, nil, nil)
 }
 
 func ExampleExtractFontsFile() {
